@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environmental Access & Air Quality</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="fog fog-left"></div>
+    <div class="fog fog-right"></div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <div class="hero-content">
+      <div class="team-names">
+        Kaniet · Elaiza · Aulona 
+      </div>
+
+      <div class="hero-kicker">
+        UW Datathon Project · 2026
+      </div>
+
+      <h1 class="clear-trigger">
+        Environmental Access <span>&amp;</span> Air Quality
+      </h1>
+
+      <p class="typewriter" aria-label="Rotating message">
+        <span id="type-text"></span>
+      </p>
+
+      <p class="hero-hint">
+        ↑ Hover over the title to clear the pollution ↑
+      </p>
+
+    
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section id="content" class="content">
+
+    <!-- Intro -->
+    <section class="section">
+      <header class="section-header">
+        <div class="section-kicker">Context</div>
+        <h2 class="clear-on-hover">Introduction</h2>
+        
+      </header>
+
+      <div class="card">
+        <p>
+            Air quality conditions vary widely across the United States, influenced by geography, regional climate, and patterns of urban and industrial activity. Using the EPA Air Quality Index (AQI) by County dataset, this analysis compares how often counties and states experience Unhealthy or Hazardous air quality days and examines how these patterns differ across regions.                
+                </p>
+        <p>
+            This project focuses on three core questions: which counties and states experience the highest number of Unhealthy or Hazardous AQI days, how air quality varies geographically across the U.S., and how exposure to key pollutants differs at the county level. Through county-level rankings, state aggregations, and regional comparisons, the analysis highlights where poor air quality is most concentrated and which pollutants contribute most to these patterns. The analysis also examines differences in air quality between urban and rural counties using a data-driven classification based on the proportion of non-good AQI days.
+                </p>
+       
+      </div>
+    </section>
+
+    <!-- Research Focus -->
+    <section class="section">
+      <header class="section-header">
+        <div class="section-kicker">Research Goals</div>
+        <h2 class="clear-on-hover">Research Focus</h2>
+        <p class="section-subtitle">
+            This project uses county-level Air Quality Index (AQI) metrics to examine where Unhealthy and Hazardous air quality days are most concentrated across the United States. The analysis focuses on geographic patterns and pollutant-specific exposure, using data analytics and visualization to compare air quality conditions across counties, states, and regions. </p>
+        <br />
+            <div class="grid-2">
+        <div class="card">
+          <h3>Key Questions</h3>
+          <ul class="list">
+            <li>Which counties or states experience the highest number of Unhealthy or Hazardous AQI days?</li>
+            <li>How does air quality vary by geographic region across the United States?</li>
+            <li>How does exposure to specific pollutants (PM2.5, ozone, and NO₂) differ across counties?</li>
+          </ul>
+        </div>
+
+        <div class="card soft">
+          <h3>What we’re answering</h3>
+          <p class="muted">
+            Task: Data Analytics and Data Visualization
+          </p>
+          <ul class="list">
+            <li>Which counties and states experience the most Unhealthy or Hazardous air quality days</li>
+            <li>How air quality patterns differ across U.S. regions</li>
+            <li>How exposure to PM2.5, ozone, and NO₂ compares across counties</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Overview -->
+<section class="section">
+    <header class="section-header">
+      <div class="section-kicker">Overview</div>
+      <h2 class="clear-on-hover">National Air Quality Patterns</h2>
+      <p class="section-subtitle">
+        Before examining individual questions, this video provides a spatial overview of air quality patterns across the United States. It highlights how unhealthy and hazardous AQI days cluster geographically and introduces the regional structure used throughout the analysis.
+      </p>
+    </header>
+  
+    <div class="card">
+      <div class="viz-embed viz-embed-xl image-embed">
+        <iframe
+          width="100%"
+          height="480"
+          src="https://www.youtube.com/embed/DsX5AEIknms"
+          title="National Air Quality Patterns"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- QUESTION 1 -->
+    <section class="section">
+      <header class="section-header">
+        <div class="section-kicker">Question 1</div>
+        <h2 class="clear-on-hover">Which counties or states experience the highest number of Unhealthy or Hazardous AQI days?
+        </h2>
+        <p class="section-subtitle">
+            For this question, we focus on the most severe air quality exposure days by examining the total number of Unhealthy and Hazardous AQI days. The following visualizations show how these severe days cluster at the county and state levels, highlighting which locations consistently experience the highest counts. Together, these charts reveal clear geographic concentration patterns, with certain counties and states accounting for a disproportionate share of the most severe air quality days.        </p>
+      </header>
+
+      <!-- Geographic Concentration of Severe AQI Days -->
+      <div class="card">
+        <h3 class="h3-accent">Geographic Concentration of Severe AQI Days</h3>
+      
+        <div class="viz-grid single">
+          <div class="viz-column">
+            <div class="viz-embed viz-embed-lg image-embed">
+              <img src="images/Counties with the most unhealthy air.png"
+                   alt="Counties with the highest number of Unhealthy and Hazardous AQI days" />
+            </div>
+      
+            <div class="viz-embed viz-embed-lg image-embed">
+              <img src="images/States with the most unhealthy air.png"
+                   alt="States with the highest total number of Unhealthy and Hazardous AQI days" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUESTION 2 -->
+    <section class="section">
+      <header class="section-header">
+        <div class="section-kicker">Question 2</div>
+        <h2 class="clear-on-hover">How does air quality vary by geographic region across the United States?</h2>
+        <p class="section-subtitle">
+            This section examines how Unhealthy and Hazardous AQI days are distributed across major U.S. regions. By grouping states into regions and comparing total counts, these visualizations highlight broad geographic differences in air quality and show which regions experience the highest concentration of severe air quality days.        </p>
+      </header>
+
+      <div class="viz-split">
+        <div class="card">
+            <h3>Regional Differences in Air Quality</h3>
+            
+          <div class="viz-embed viz-embed-xl image-embed">
+            <img src="images/Regions with the most unhealthy air.png"
+            alt="Comparison of total Unhealthy and Hazardous AQI days across U.S. regions" />
+                  </div>
+        </div>
+
+        <div class="card soft">
+            <h3>Supporting State-level maps</h3>
+          
+            <div class="viz-column">
+              <div class="viz-embed viz-embed-sm image-embed">
+                <img src="images/Unhealthy or Hazardous AQI days.png"
+                     alt="State-level map showing the geographic distribution of Unhealthy and Hazardous AQI days across the United States" />
+              </div>
+          
+              <div class="viz-embed viz-embed-sm image-embed">
+                <img src="images/legend explaining the regions.png"
+                     alt="Legend explaining U.S. regional groupings used in the analysis" />
+              </div>
+          
+              <div class="viz-embed viz-embed-sm image-embed">
+                <img src="images/NESW shaded.png"
+                     alt="Map of the United States shaded by North, East, South, and West regions" />
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- QUESTION 3 -->
+    <section class="section">
+      <header class="section-header">
+        <div class="section-kicker">Question 3</div>
+        <h2 class="clear-on-hover">
+            How does exposure to specific pollutants (PM2.5, ozone, and NO₂) differ across counties?
+          </h2>
+                  <p class="section-subtitle">
+                    This section compares county-level exposure to three key air pollutants—PM2.5, ozone, and NO₂. By examining each pollutant separately, the analysis highlights how exposure patterns differ across counties and reveals which pollutants contribute most to poor air quality in different parts of the United States.
+                        </p>
+      </header>
+
+      <div class="card">
+        <div class="viz-3up">
+          <div class="viz-embed viz-embed-md image-embed">
+            <img src="images/PM2.5 across counties.png"
+                 alt="County-level PM2.5 exposure across the United States" />
+          </div>
+      
+          <div class="viz-embed viz-embed-md image-embed">
+            <img src="images/Ozone across counties.png"
+                 alt="County-level ozone exposure across the United States" />
+          </div>
+      
+          <div class="viz-embed viz-embed-md image-embed">
+            <img src="images/NO2 across counties.png"
+                 alt="County-level nitrogen dioxide exposure across the United States" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- CONCLUSION -->
+<section class="section">
+    <header class="section-header">
+      <div class="section-kicker">Conclusion</div>
+      <h2 class="clear-on-hover">Summary of Findings from Air Quality Analysis</h2>
+    </header>
+  
+    <div class="card">
+        <p>
+            We analyzed how often counties and states experience Unhealthy or Hazardous air quality days and how these patterns vary by geography and pollutant. By aggregating county level AQI data and mapping it at the county, state, and regional levels, we were able to identify where severe air quality exposure is most concentrated across the United States.
+          </p>
+      
+          <p>
+            Our analysis shows that severe air quality days are not evenly distributed. A small number of counties account for a large share of Unhealthy and Hazardous AQI days, with counties in California consistently ranking among the highest. When county data is aggregated at the state level, states such as California and Texas stand out for having the highest total number of severe AQI days.
+          </p>
+      
+          <p>
+            At the regional level, the Western United States experiences the greatest concentration of severe air quality days, while the Northeast has the lowest. These regional differences help explain why certain parts of the country face more persistent air quality challenges than others.
+          </p>
+      
+          <p>
+            When comparing specific pollutants, PM2.5, ozone, and NO₂ show different spatial patterns across counties. PM2.5 exposure is more prominent in parts of the Midwest and West, ozone exposure is higher in many Southern and Western counties, and NO₂ exposure tends to be concentrated in more urbanized counties. Together, these differences highlight how multiple pollutants contribute to poor air quality in different regions.
+          </p>
+      
+          <p>
+            Overall, this analysis demonstrates how county level AQI data can be used to reveal clear geographic and pollutant specific patterns in air quality. These findings provide a data driven foundation for understanding where air quality risks are most severe and which pollutants play the largest role in different areas.
+          </p>
+    </div>
+  </section>
+      
+
+    <!-- Dataset -->
+    <section class="section" id="dataset">
+      <header class="section-header">
+        <div class="section-kicker">Source</div>
+        <h2 class="clear-on-hover">Dataset</h2>
+        <p class="section-subtitle">
+          AQI by County dataset used for all visuals and comparisons.
+        </p>
+      </header>
+
+      <div class="card soft">
+        <p class="muted">
+          Data link:
+          <a href="https://drive.google.com/file/d/13TT6X89lnQtWIhA65q6ajp0Yn8hyUft3/view?usp=sharing" target="_blank" rel="noopener">
+            https://drive.google.com/file/d/13TT6X89lnQtWIhA65q6ajp0Yn8hyUft3/view?usp=sharing
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>UW Datathon Project · 2026</div>
+      <div>  @Kaniet Baratov, Elaiza Hoxha, Aulona Hoxha </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
